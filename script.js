@@ -132,6 +132,12 @@ const restaurant = {
 // console.log(team1 > team2 && 'Team2 is more likely to win');
 
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
 
 //Using the for-of loop
-for (const item of menu) console.log(item);
+// for (const item of menu) console.log(item);
+
+//Index in the for-of loop
+for (const item of menu.entries()) {
+  console.log(`${item[0] + 1}: ${item[1]} `);
+}
