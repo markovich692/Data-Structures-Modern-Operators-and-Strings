@@ -139,5 +139,6 @@ console.log(menu);
 
 //Index in the for-of loop
 for (const item of menu.entries()) {
-  console.log(`${item[0] + 1}: ${item[1]} `);
+  const [number, menuName] = item;
+  console.log(`${number}: ${menuName} `);
 }
