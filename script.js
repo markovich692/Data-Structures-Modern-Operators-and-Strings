@@ -126,4 +126,7 @@ const printGoals = function (...players) {
   console.log(players, players.length);
 };
 
-printGoals('Jeff', 'Paul', 'Ronaldo', 'Zidane', 'Beckham');
+printGoals(...game.scored);
+
+console.log(team1 < team2 && 'Team1 is more likely to win');
+console.log(team1 > team2 && 'Team2 is more likely to win');
