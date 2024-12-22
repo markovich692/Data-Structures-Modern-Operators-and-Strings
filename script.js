@@ -111,11 +111,8 @@ const {
 console.log(team1);
 console.log(players1);
 
-const players1 = game.players[0];
-const players2 = game.players[1];
-
 const [gk, ...fieldPlayers] = players1;
 
-//Create an array containing all players, 22 players from both teams
-
 const allPlayers = [...players1, ...players2];
+
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
