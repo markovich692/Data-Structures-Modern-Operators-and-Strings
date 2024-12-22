@@ -103,16 +103,21 @@ const game = {
 };
 
 const {
-  team1,
-  team2,
+  // team1,
+  // team2,
   players: [players1, players2],
 } = game;
 
-console.log(team1);
-console.log(players1);
+// console.log(team1);
+// console.log(players1);
+// console.log(team1);
+// console.log(team2);
 
 const [gk, ...fieldPlayers] = players1;
 
 const allPlayers = [...players1, ...players2];
 
 const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+
+const { team1, x: draw, team2 } = game.odds;
+console.log(draw);
