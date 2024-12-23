@@ -146,3 +146,4 @@ const openingHours = {
 };
 
 console.log(openingHours);
+console.log(openingHours.wed?.open);
