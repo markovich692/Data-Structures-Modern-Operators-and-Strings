@@ -167,6 +167,9 @@ const openingHours = {
   },
 };
 
-for (const day of openingHours) {
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+for (const day of properties) {
   console.log(day);
 }
