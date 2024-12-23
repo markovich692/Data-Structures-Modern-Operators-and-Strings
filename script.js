@@ -182,3 +182,16 @@ const openingHours = {
 //Property values
 const propertyValues = Object.values(openingHours);
 console.log(propertyValues);
+
+//Entire object
+const entireObject = Object.entries(openingHours);
+
+let sign = `We are open ${entireObject.length} days a week: `;
+
+for (const [days, dispo] of entireObject) {
+  const { open, close } = dispo;
+
+  sign = sign + `${days} from ${open} to ${close}, `;
+}
+
+console.log(sign);
