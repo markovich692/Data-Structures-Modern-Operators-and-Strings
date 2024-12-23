@@ -167,13 +167,18 @@ const openingHours = {
   },
 };
 
-const properties = Object.keys(openingHours);
-console.log(properties);
-let sign = `We are open ${properties.length} days a week: `;
+//Property Names
+// const properties = Object.keys(openingHours);
+// console.log(properties);
+// let sign = `We are open ${properties.length} days a week: `;
 
-for (const day of properties) {
-  console.log(day);
-  sign = sign + `${day}, `;
-}
+// for (const day of properties) {
+//   console.log(day);
+//   sign = sign + `${day}, `;
+// }
 
-console.log(sign);
+// console.log(sign);
+
+//Property values
+const propertyValues = Object.values(openingHours);
+console.log(propertyValues);
