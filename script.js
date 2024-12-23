@@ -266,12 +266,19 @@ const game = {
 // }
 
 //2
-const arrayOdds = Object.values(game.odds);
-let sum = 0;
-for (const oddsValue of Object.values(game.odds)) {
-  sum = sum + oddsValue;
-}
-
-console.log(sum / arrayOdds.length);
+// const arrayOdds = Object.values(game.odds);
+// let sum = 0;
+// for (const oddsValue of Object.values(game.odds)) {
+//   sum = sum + oddsValue;
+// }
+// console.log(sum / arrayOdds.length);
 
 //3
+
+const entries = Object.entries(game);
+const [key1, name1] = entries[0];
+const [key2, name2] = entries[1];
+const [odds, { team1, x, team2 }] = entries[6];
+console.log(`Odd of victory ${name1}: ${team1} 
+Odd of draw: ${x}
+Odd of victory ${name2}: ${team2}`);
