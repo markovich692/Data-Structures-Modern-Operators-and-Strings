@@ -188,10 +188,11 @@ const entireObject = Object.entries(openingHours);
 
 let sign = `We are open ${entireObject.length} days a week: `;
 
-for (const [days, dispo] of entireObject) {
-  const { open, close } = dispo;
+for (const [key, value] of entireObject) {
+  const { open, close } = value;
 
-  sign = sign + `${days} from ${open} to ${close}, `;
+  sign = sign + `on ${key} we are open from ${open} to ${close}, `;
 }
 
+sign = sign + `enjoy your meal!`;
 console.log(sign);
