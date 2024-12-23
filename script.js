@@ -29,21 +29,6 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
 };
 
 // Data Structures, Modern Operators and Strings
@@ -131,14 +116,33 @@ const restaurant = {
 // console.log(team1 < team2 && 'Team1 is more likely to win');
 // console.log(team1 > team2 && 'Team2 is more likely to win');
 
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
-console.log(menu);
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
 
 //Using the for-of loop
 // for (const item of menu) console.log(item);
 
 //Index in the for-of loop
-for (const item of menu.entries()) {
-  const [number, menuName] = item;
-  console.log(`${number}: ${menuName} `);
-}
+// for (const item of menu.entries()) {
+//   const [number, menuName] = item;
+//   console.log(`${number}: ${menuName} `);
+// }
+
+const weekDays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+const openingHours = {
+  [weekDays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekDays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekDays[5]]: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
+console.log(openingHours);
