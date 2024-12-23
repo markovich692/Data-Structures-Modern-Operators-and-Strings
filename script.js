@@ -261,6 +261,17 @@ const game = {
 };
 
 //1
-for (const playerName of game.scored.entries()) {
-  console.log(`Goal ${playerName[0] + 1}: ${playerName[1]}`);
+// for (const playerName of game.scored.entries()) {
+//   console.log(`Goal ${playerName[0] + 1}: ${playerName[1]}`);
+// }
+
+//2
+const arrayOdds = Object.values(game.odds);
+let sum = 0;
+for (const oddsValue of Object.values(game.odds)) {
+  sum = sum + oddsValue;
 }
+
+console.log(sum / arrayOdds.length);
+
+//3
