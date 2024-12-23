@@ -251,7 +251,7 @@ const game = {
     ],
   ],
   score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  scored: ['Lewandowski', 'Gnabry', 'Lewandowski', 'Hummels'],
   date: 'Nov 9th, 2037',
   odds: {
     team1: 1.33,
@@ -260,31 +260,7 @@ const game = {
   },
 };
 
-const {
-  // team1,
-  // team2,
-  players: [players1, players2],
-} = game;
-
-// console.log(team1);
-// console.log(players1);
-// console.log(team1);
-// console.log(team2);
-
-const [gk, ...fieldPlayers] = players1;
-
-const allPlayers = [...players1, ...players2];
-
-const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
-
-const { team1, x: draw, team2 } = game.odds;
-console.log(draw);
-
-const printGoals = function (...players) {
-  console.log(players, players.length);
-};
-
-printGoals(...game.scored);
-
-console.log(team1 < team2 && 'Team1 is more likely to win');
-console.log(team1 > team2 && 'Team2 is more likely to win');
+//1
+for (const playerName of game.scored.entries()) {
+  console.log(`Goal ${playerName[0] + 1}: ${playerName[1]}`);
+}
