@@ -128,22 +128,45 @@ const restaurant = {
 //   console.log(`${number}: ${menuName} `);
 // }
 
-const weekDays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// const weekDays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+// const openingHours = {
+//   [weekDays[3]]: {
+//     open: 12,
+//     close: 22,
+//   },
+//   [weekDays[4]]: {
+//     open: 11,
+//     close: 23,
+//   },
+//   [weekDays[5]]: {
+//     open: 0, // Open 24 hours
+//     close: 24,
+//   },
+// };
+
+// console.log(openingHours);
+// console.log(openingHours.wed?.open);
+
+// for (const day of weekDays.entries()) {
+//   console.log(`day ${day[0] + 1}:${day[1]}`);
+// }
 
 const openingHours = {
-  [weekDays[3]]: {
+  thu: {
     open: 12,
     close: 22,
   },
-  [weekDays[4]]: {
+  fri: {
     open: 11,
     close: 23,
   },
-  [weekDays[5]]: {
+  sat: {
     open: 0, // Open 24 hours
     close: 24,
   },
 };
 
-console.log(openingHours);
-console.log(openingHours.wed?.open);
+for (const day of openingHours) {
+  console.log(day);
+}
