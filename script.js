@@ -326,3 +326,6 @@ const mexicanFoods = new Set([
   'avocado',
   'garlic',
 ]);
+
+const italianMexicanFoodsFusion = italianFoods.union(mexicanFoods);
+console.log(italianMexicanFoodsFusion);
