@@ -333,5 +333,9 @@ const mexicanFoods = new Set([
 // const italianMexicanCommonFoods = italianFoods.intersection(mexicanFoods);
 // console.log(italianMexicanCommonFoods);
 
-const italianUniqueFoods = italianFoods.difference(mexicanFoods);
-console.log(italianUniqueFoods);
+// const italianUniqueFoods = italianFoods.difference(mexicanFoods);
+// console.log(italianUniqueFoods);
+
+const italianMexicanUniqueFoods =
+  italianFoods.symmetricDifference(mexicanFoods);
+console.log(italianMexicanUniqueFoods);
