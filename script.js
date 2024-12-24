@@ -221,7 +221,7 @@ const restaurant = {
 
 const game = {
   team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
+  team2: 'Borussia Dortmund',
   players: [
     [
       'Neuer',
@@ -291,8 +291,13 @@ const game = {
 console.log(Object.entries(game.odds));
 
 for (const [key, value] of Object.entries(game.odds)) {
-  game[key] && console.log(`Odd of victory ${game[key]}: ${value} `);
-  game[key] || console.log(`Odd of draw : ${value} `);
+  const oddString =
+    key === 'x'
+      ? `Odd of draw : ${value} `
+      : `Odd of victory ${game[key]}: ${value} `;
+  console.log(oddString);
+  // game[key] && console.log(`Odd of victory ${game[key]}: ${value} `);
+  // game[key] || console.log(`Odd of draw : ${value} `);
 }
 
 //4-Bonus
