@@ -327,8 +327,11 @@ const mexicanFoods = new Set([
   'garlic',
 ]);
 
-const italianMexicanFoodsFusion = italianFoods.union(mexicanFoods);
-console.log(italianMexicanFoodsFusion);
+// const italianMexicanFoodsFusion = italianFoods.union(mexicanFoods);
+// console.log(italianMexicanFoodsFusion);
 
-const italianMexicanCommonFoods = italianFoods.intersection(mexicanFoods);
-console.log(italianMexicanCommonFoods);
+// const italianMexicanCommonFoods = italianFoods.intersection(mexicanFoods);
+// console.log(italianMexicanCommonFoods);
+
+const italianUniqueFoods = italianFoods.difference(mexicanFoods);
+console.log(italianUniqueFoods);
