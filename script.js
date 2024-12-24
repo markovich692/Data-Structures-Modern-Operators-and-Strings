@@ -288,16 +288,41 @@ const game = {
 // Odd of draw: ${x}
 // Odd of victory ${name2}: ${team2}`);
 
-console.log(Object.entries(game.odds));
+// console.log(Object.entries(game.odds));
 
-for (const [key, value] of Object.entries(game.odds)) {
-  const oddString =
-    key === 'x'
-      ? `Odd of draw : ${value} `
-      : `Odd of victory ${game[key]}: ${value} `;
-  console.log(oddString);
-  // game[key] && console.log(`Odd of victory ${game[key]}: ${value} `);
-  // game[key] || console.log(`Odd of draw : ${value} `);
-}
+// for (const [key, value] of Object.entries(game.odds)) {
+//   const oddString =
+//     key === 'x'
+//       ? `Odd of draw : ${value} `
+//       : `Odd of victory ${game[key]}: ${value} `;
+//   console.log(oddString);
+//   // game[key] && console.log(`Odd of victory ${game[key]}: ${value} `);
+//   // game[key] || console.log(`Odd of draw : ${value} `);
+// }
 
 //4-Bonus
+
+// const scorerValues = Object.values(game.scored);
+// console.log(scorerValues);
+
+// for (const scorers of Object.values(game.scored)) {
+//   console.log(scorers);
+// }
+
+const italianFoods = new Set([
+  'pasta',
+  'gnocchi',
+  'tomatoes',
+  'olive oil',
+  'garlic',
+  'basil',
+]);
+
+const mexicanFoods = new Set([
+  'tortillas',
+  'beans',
+  'rice',
+  'tomatoes',
+  'avocado',
+  'garlic',
+]);
