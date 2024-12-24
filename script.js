@@ -329,3 +329,6 @@ const mexicanFoods = new Set([
 
 const italianMexicanFoodsFusion = italianFoods.union(mexicanFoods);
 console.log(italianMexicanFoodsFusion);
+
+const italianMexicanCommonFoods = italianFoods.intersection(mexicanFoods);
+console.log(italianMexicanCommonFoods);
