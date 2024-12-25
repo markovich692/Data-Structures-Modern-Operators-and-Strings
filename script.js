@@ -357,4 +357,27 @@ const time = 12;
 //     ? res.get(true)
 //     : res.get(false);
 
-console.log(res.get(time > res.get('open') && time < res.get('close')));
+// console.log(res.get(time > res.get('open') && time < res.get('close')));
+
+const quiz = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Python'],
+  [4, 'JavaScript'],
+  ['correct', 'JavaScript'],
+  [true, 'Correct :D'],
+  [false, 'Incorrect :('],
+]);
+
+console.log(quiz.get('question'));
+
+for (const [key, value] of quiz) {
+  if (typeof key === 'number') {
+    console.log(`${key}: ${value}`);
+  }
+}
+
+const answer = Number(prompt(`your answer is:`));
+
+console.log(quiz.get(quiz.get(answer) === quiz.get('correct')));
