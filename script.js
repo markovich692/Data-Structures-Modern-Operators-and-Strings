@@ -336,6 +336,23 @@ const mexicanFoods = new Set([
 // const italianUniqueFoods = italianFoods.difference(mexicanFoods);
 // console.log(italianUniqueFoods);
 
-const italianMexicanUniqueFoods =
-  italianFoods.symmetricDifference(mexicanFoods);
-console.log(italianMexicanUniqueFoods);
+// const italianMexicanUniqueFoods =
+//   italianFoods.symmetricDifference(mexicanFoods);
+// console.log(italianMexicanUniqueFoods);
+
+const res = new Map();
+
+res
+  .set('name', 'La Sicile')
+  .set('address', '234 Grande Pizza 66')
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open D:')
+  .set(false, 'We are closed :)');
+
+const time = 12;
+
+const available =
+  time > res.get('open') && time < res.get('close')
+    ? res.get(true)
+    : res.get(false);
