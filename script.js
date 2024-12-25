@@ -352,7 +352,9 @@ res
 
 const time = 12;
 
-const available =
-  time > res.get('open') && time < res.get('close')
-    ? res.get(true)
-    : res.get(false);
+// const available =
+//   time > res.get('open') && time < res.get('close')
+//     ? res.get(true)
+//     : res.get(false);
+
+console.log(res.get(time > res.get('open') && time < res.get('close')));
