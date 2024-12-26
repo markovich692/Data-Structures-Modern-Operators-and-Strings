@@ -446,27 +446,30 @@ const gameEvents = new Map([
 ]);
 
 //1
-let eventArray = [];
-for (const [key, value] of gameEvents) {
-  eventArray.push(value);
-}
 
-const events = [...new Set(eventArray)];
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+// let eventArray = [];
+// for (const [key, value] of gameEvents) {
+//   eventArray.push(value);
+// }
+
+// const events = [...new Set(eventArray)];
 
 // console.log(events);
 
 //2
-gameEvents.delete(64);
+// gameEvents.delete(64);
 // console.log(gameEvents);
 
 //3
-console.log(
-  `An event happened, on average, every ${90 / [...gameEvents].length} minutes.`
-);
+// console.log(
+//   `An event happened, on average, every ${90 / [...gameEvents].length} minutes.`
+// );
 
 //4
-for (const [key, value] of gameEvents) {
-  key <= 45
-    ? console.log(`[FIRST HALF]${key}: ${value}`)
-    : console.log(`[SECOND HALF]${key}: ${value}`);
-}
+// for (const [key, value] of gameEvents) {
+//   key <= 45
+//     ? console.log(`[FIRST HALF]${key}: ${value}`)
+//     : console.log(`[SECOND HALF]${key}: ${value}`);
+// }
