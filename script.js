@@ -312,46 +312,46 @@ const restaurant = {
 // }
 // GOOD LUCK 😀
 
-// const game = {
-//   team1: 'Bayern Munich',
-//   team2: 'Borussia Dortmund',
-//   players: [
-//     [
-//       'Neuer',
-//       'Pavard',
-//       'Martinez',
-//       'Alaba',
-//       'Davies',
-//       'Kimmich',
-//       'Goretzka',
-//       'Coman',
-//       'Muller',
-//       'Gnarby',
-//       'Lewandowski',
-//     ],
-//     [
-//       'Burki',
-//       'Schulz',
-//       'Hummels',
-//       'Akanji',
-//       'Hakimi',
-//       'Weigl',
-//       'Witsel',
-//       'Hazard',
-//       'Brandt',
-//       'Sancho',
-//       'Gotze',
-//     ],
-//   ],
-//   score: '4:0',
-//   scored: ['Lewandowski', 'Gnabry', 'Lewandowski', 'Hummels'],
-//   date: 'Nov 9th, 2037',
-//   odds: {
-//     team1: 1.33,
-//     x: 3.25,
-//     team2: 6.5,
-//   },
-// };
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnabry', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
 
 //1
 // for (const playerName of game.scored.entries()) {
@@ -403,7 +403,6 @@ const restaurant = {
 //        Lewandowski: 2
 // }
 
-//4 Bonus
 // const scorers = {};
 
 // for (const player of game.scored) {
@@ -412,7 +411,7 @@ const restaurant = {
 
 // console.log(scorers.Gnabry);
 
-//CODING CHALLENGE #4
+//CODING CHALLENGE #3
 
 // Let's continue with our football betting app! This time, we have a map
 // called 'gameEvents' (see below) with a log of the events that happened
@@ -429,3 +428,21 @@ const restaurant = {
 // 4. Loop over 'gameEvents' and log each element to the console,marking whether
 // it's in the first half or second half (after 45 min) of the game, like this:
 // [FIRST HALF] 17: ⚽   GOAL GOOD LUCK 😀
+
+//Mapping values (events) with their keys (minutes)
+
+const gameEvents = new Map([
+  [17, 'GOAL'],
+  [36, 'Substitution'],
+  [47, 'GOAL'],
+  [61, 'Substitution'],
+  [64, 'Yellow card'],
+  [69, 'Red card'],
+  [70, 'Substitution'],
+  [72, 'Substitution'],
+  [76, 'GOAL'],
+  [80, 'GOAL'],
+  [92, 'Yellow card'],
+]);
+
+console.log(gameEvents.get(80));
