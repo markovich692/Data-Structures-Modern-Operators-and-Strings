@@ -454,3 +454,7 @@ for (const [key, value] of gameEvents) {
 const events = [...new Set(eventArray)];
 
 console.log(events);
+
+//2
+gameEvents.delete(64);
+console.log(gameEvents);
