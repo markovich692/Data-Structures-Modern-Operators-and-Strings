@@ -445,4 +445,12 @@ const gameEvents = new Map([
   [92, 'Yellow card'],
 ]);
 
-console.log(gameEvents.get(80));
+//1
+let eventArray = [];
+for (const [key, value] of gameEvents) {
+  eventArray.push(value);
+}
+
+const events = [...new Set(eventArray)];
+
+console.log(events);
