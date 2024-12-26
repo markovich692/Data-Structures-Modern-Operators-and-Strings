@@ -196,6 +196,99 @@ const restaurant = {
 // sign = sign + `enjoy your meal!`;
 // console.log(sign);
 
+// const scorerValues = Object.values(game.scored);
+// console.log(scorerValues);
+
+// for (const scorers of Object.values(game.scored)) {
+//   console.log(scorers);
+// }
+
+// const italianFoods = new Set([
+//   'pasta',
+//   'gnocchi',
+//   'tomatoes',
+//   'olive oil',
+//   'garlic',
+//   'basil',
+// ]);
+
+// const mexicanFoods = new Set([
+//   'tortillas',
+//   'beans',
+//   'rice',
+//   'tomatoes',
+//   'avocado',
+//   'garlic',
+// ]);
+
+// // const italianMexicanFoodsFusion = italianFoods.union(mexicanFoods);
+// // console.log(italianMexicanFoodsFusion);
+
+// // const italianMexicanCommonFoods = italianFoods.intersection(mexicanFoods);
+// // console.log(italianMexicanCommonFoods);
+
+// // const italianUniqueFoods = italianFoods.difference(mexicanFoods);
+// // console.log(italianUniqueFoods);
+
+// // const italianMexicanUniqueFoods =
+// //   italianFoods.symmetricDifference(mexicanFoods);
+// // console.log(italianMexicanUniqueFoods);
+
+// const res = new Map();
+
+// res
+//   .set('name', 'La Sicile')
+//   .set('address', '234 Grande Pizza 66')
+//   .set('open', 11)
+//   .set('close', 23)
+//   .set(true, 'We are open D:')
+//   .set(false, 'We are closed :)');
+
+// const time = 12;
+
+// // const available =
+// //   time > res.get('open') && time < res.get('close')
+// //     ? res.get(true)
+// //     : res.get(false);
+
+// // console.log(res.get(time > res.get('open') && time < res.get('close')));
+
+// // const quiz = new Map([
+// //   ['question', 'What is the best programming language in the world?'],
+// //   [1, 'C'],
+// //   [2, 'Java'],
+// //   [3, 'Python'],
+// //   [4, 'JavaScript'],
+// //   ['correct', 'JavaScript'],
+// //   [true, 'Correct :D'],
+// //   [false, 'Incorrect :('],
+// // ]);
+
+// const quiz = new Map([
+//   ['question', 'What is the best programming language in the world?'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'Python'],
+//   [4, 'JavaScript'],
+//   ['correct', 'JavaScript'],
+//   [true, 'Correct :D'],
+//   [false, 'Incorrect :('],
+// ]);
+
+// // console.log(quiz.get('question'));
+
+// for (const [key, value] of quiz) {
+//   if (typeof key === 'number') {
+//     console.log(`${key}: ${value}`);
+//   }
+// }
+
+// const answer = Number(prompt(`your answer is:`));
+
+// console.log(quiz.get(quiz.get(answer) === quiz.get('correct')));
+
+// console.log([...quiz]);
+
 //CHallenge 2
 
 // Coding Challenge #2
@@ -301,96 +394,20 @@ const game = {
 // }
 
 //4-Bonus
-
-// const scorerValues = Object.values(game.scored);
-// console.log(scorerValues);
-
-// for (const scorers of Object.values(game.scored)) {
-//   console.log(scorers);
+//Create an object called 'scorers' which contains the names of
+//the players who scored as properties, and the number of goals
+//as the value. In this game, it will look like this:
+//      {
+//        Gnarby: 1,
+//        Hummels: 1,
+//        Lewandowski: 2
 // }
 
-const italianFoods = new Set([
-  'pasta',
-  'gnocchi',
-  'tomatoes',
-  'olive oil',
-  'garlic',
-  'basil',
-]);
+//4 Bonus
+const scorers = {};
 
-const mexicanFoods = new Set([
-  'tortillas',
-  'beans',
-  'rice',
-  'tomatoes',
-  'avocado',
-  'garlic',
-]);
-
-// const italianMexicanFoodsFusion = italianFoods.union(mexicanFoods);
-// console.log(italianMexicanFoodsFusion);
-
-// const italianMexicanCommonFoods = italianFoods.intersection(mexicanFoods);
-// console.log(italianMexicanCommonFoods);
-
-// const italianUniqueFoods = italianFoods.difference(mexicanFoods);
-// console.log(italianUniqueFoods);
-
-// const italianMexicanUniqueFoods =
-//   italianFoods.symmetricDifference(mexicanFoods);
-// console.log(italianMexicanUniqueFoods);
-
-const res = new Map();
-
-res
-  .set('name', 'La Sicile')
-  .set('address', '234 Grande Pizza 66')
-  .set('open', 11)
-  .set('close', 23)
-  .set(true, 'We are open D:')
-  .set(false, 'We are closed :)');
-
-const time = 12;
-
-// const available =
-//   time > res.get('open') && time < res.get('close')
-//     ? res.get(true)
-//     : res.get(false);
-
-// console.log(res.get(time > res.get('open') && time < res.get('close')));
-
-// const quiz = new Map([
-//   ['question', 'What is the best programming language in the world?'],
-//   [1, 'C'],
-//   [2, 'Java'],
-//   [3, 'Python'],
-//   [4, 'JavaScript'],
-//   ['correct', 'JavaScript'],
-//   [true, 'Correct :D'],
-//   [false, 'Incorrect :('],
-// ]);
-
-const quiz = new Map([
-  ['question', 'What is the best programming language in the world?'],
-  [1, 'C'],
-  [2, 'Java'],
-  [3, 'Python'],
-  [4, 'JavaScript'],
-  ['correct', 'JavaScript'],
-  [true, 'Correct :D'],
-  [false, 'Incorrect :('],
-]);
-
-// console.log(quiz.get('question'));
-
-for (const [key, value] of quiz) {
-  if (typeof key === 'number') {
-    console.log(`${key}: ${value}`);
-  }
+for (const player of game.scored) {
+  scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 }
 
-const answer = Number(prompt(`your answer is:`));
-
-console.log(quiz.get(quiz.get(answer) === quiz.get('correct')));
-
-console.log([...quiz]);
+console.log(scorers.Gnabry);
