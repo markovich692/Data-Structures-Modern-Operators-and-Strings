@@ -453,8 +453,15 @@ for (const [key, value] of gameEvents) {
 
 const events = [...new Set(eventArray)];
 
-console.log(events);
+// console.log(events);
 
 //2
 gameEvents.delete(64);
-console.log(gameEvents);
+// console.log(gameEvents);
+
+//3
+console.log(
+  `An event happened, on average, every ${90 / [...gameEvents].length} minutes.`
+);
+
+//4
