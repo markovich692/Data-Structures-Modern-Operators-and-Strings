@@ -465,3 +465,8 @@ console.log(
 );
 
 //4
+for (const [key, value] of gameEvents) {
+  key <= 45
+    ? console.log(`[FIRST HALF]${key}: ${value}`)
+    : console.log(`[SECOND HALF]${key}: ${value}`);
+}
