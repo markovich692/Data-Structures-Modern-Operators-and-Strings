@@ -484,7 +484,16 @@
 
 // checkMiddleSeat('11A');
 
-const email = 'hello@jonas.io';
-const loginEmail = '     Hello@Jonas.Io \n';
+// const email = 'hello@jonas.io';
+// const loginEmail = '     Hello@Jonas.Io \n';
 
-const normalizedEmail = loginEmail.toLowerCase().trim();
+// const normalizedEmail = loginEmail.toLowerCase().trim();
+
+const announcement =
+  'All passengers, come to boading door 23. Boarding door 23';
+
+//This will only replace the first occurence of the searched string
+console.log(announcement.replace('door', 'gate'));
+
+//This will only replace all occurences of the searched string
+console.log(announcement.replaceAll('door', 'gate'));
