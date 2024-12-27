@@ -474,12 +474,21 @@
 //     : console.log(`[SECOND HALF]${key}: ${value}`);
 // }
 
-const checkMiddleSeat = function (seat) {
-  //B and E are middle seats
+// const checkMiddleSeat = function (seat) {
+//   //B and E are middle seats
 
-  seat.slice(-1) === 'B' || seat.slice(-1) === 'E'
-    ? console.log(`It's a middle seat`)
-    : console.log(`it's not a middle seat`);
-};
+//   seat.slice(-1) === 'B' || seat.slice(-1) === 'E'
+//     ? console.log(`It's a middle seat`)
+//     : console.log(`it's not a middle seat`);
+// };
 
-checkMiddleSeat('11A');
+// checkMiddleSeat('11A');
+
+const email = 'hello@jonas.io';
+const loginEmail = 'Hello@Jonas.Io \n';
+
+console.log(loginEmail.slice(0, 14).toLowerCase());
+
+const priceGB = '233,99$';
+
+console.log([...priceGB]);
