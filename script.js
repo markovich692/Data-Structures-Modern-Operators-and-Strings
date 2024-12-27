@@ -522,12 +522,28 @@ const stringName = 'Mark Padawan';
 //   ['Mr.', firstName, lastName, 'the best coder in the whole universe'].join(' ')
 // );
 
-const passenger = 'allison rakotosson nasser abdallah';
+const passenger = 'allison rakotossom nasser abdallah';
 
-console.log(passenger.split(' '));
-let fullName = '';
-for (const item of passenger.split(' ')) {
-  fullName = fullName + item[0].toUpperCase() + item.slice(1) + ' ';
-}
+// console.log(passenger.split(' '));
+// let fullName = '';
+// for (const item of passenger.split(' ')) {
+//   fullName = fullName + item[0].toUpperCase() + item.slice(1) + ' ';
+// }
 
-console.log(fullName);
+// console.log(fullName);
+
+// console.log(passenger.slice(0, 7).toUpperCase());
+
+const maskCard = function (cardNumber) {
+  const numStr = cardNumber + '';
+
+  const cardLength = numStr.length;
+
+  const cardLastDig = numStr.slice(-4);
+
+  console.log(cardLastDig);
+
+  console.log(cardLastDig.padStart(cardLength, '+'));
+};
+
+maskCard(8388333845858348);
