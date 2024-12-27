@@ -485,10 +485,6 @@
 // checkMiddleSeat('11A');
 
 const email = 'hello@jonas.io';
-const loginEmail = 'Hello@Jonas.Io \n';
+const loginEmail = '     Hello@Jonas.Io \n';
 
-console.log(loginEmail.slice(0, 14).toLowerCase());
-
-const priceGB = '233,99$';
-
-console.log([...priceGB]);
+const normalizedEmail = loginEmail.toLowerCase().trim();
