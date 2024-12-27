@@ -501,6 +501,33 @@ const announcement =
 ////This will also replace all occurences of the searched string-using a regular expression approach
 // console.log(announcement.replace(/door/g, 'gate'));
 
-console.log(announcement.includes('co'));
-console.log(announcement.startsWith('Al'));
-console.log(announcement.endsWith('or 23'));
+// console.log(announcement.includes('co'));
+// console.log(announcement.startsWith('Al'));
+// console.log(announcement.endsWith('or 23'));
+
+const stringName = 'Mark Padawan';
+// let arr = [];
+// const firstName = stringName.slice(0, 4);
+// const lastName = stringName.slice(5);
+// arr.push(firstName);
+// arr.push(lastName);
+// console.log(arr);
+
+//Using the split method
+// console.log(stringName);
+// const [firstName, lastName] = stringName.split(' ');
+
+//Using the join method
+// console.log(
+//   ['Mr.', firstName, lastName, 'the best coder in the whole universe'].join(' ')
+// );
+
+const passenger = 'allison rakotosson nasser abdallah';
+
+console.log(passenger.split(' '));
+let fullName = '';
+for (const item of passenger.split(' ')) {
+  fullName = fullName + item[0].toUpperCase() + item.slice(1) + ' ';
+}
+
+console.log(fullName);
