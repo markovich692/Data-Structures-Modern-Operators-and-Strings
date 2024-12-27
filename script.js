@@ -499,4 +499,8 @@ const announcement =
 // console.log(announcement.replaceAll('door', 'gate'));
 
 ////This will also replace all occurences of the searched string-using a regular expression approach
-console.log(announcement.replace(/door/g, 'gate'));
+// console.log(announcement.replace(/door/g, 'gate'));
+
+console.log(announcement.includes('co'));
+console.log(announcement.startsWith('Al'));
+console.log(announcement.endsWith('or 23'));
