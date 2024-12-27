@@ -477,7 +477,7 @@
 const checkMiddleSeat = function (seat) {
   //B and E are middle seats
 
-  seat.slice(2) === 'B' || seat.slice(2) === 'E'
+  seat.slice(-1) === 'B' || seat.slice(-1) === 'E'
     ? console.log(`It's a middle seat`)
     : console.log(`it's not a middle seat`);
 };
