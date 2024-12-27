@@ -493,7 +493,10 @@ const announcement =
   'All passengers, come to boading door 23. Boarding door 23';
 
 //This will only replace the first occurence of the searched string
-console.log(announcement.replace('door', 'gate'));
+// console.log(announcement.replace('door', 'gate'));
 
-//This will only replace all occurences of the searched string
-console.log(announcement.replaceAll('door', 'gate'));
+//This will replace all occurences of the searched string
+// console.log(announcement.replaceAll('door', 'gate'));
+
+////This will also replace all occurences of the searched string-using a regular expression approach
+console.log(announcement.replace(/door/g, 'gate'));
