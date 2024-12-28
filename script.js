@@ -489,8 +489,8 @@
 
 // const normalizedEmail = loginEmail.toLowerCase().trim();
 
-const announcement =
-  'All passengers, come to boading door 23. Boarding door 23';
+// const announcement =
+//   'All passengers, come to boading door 23. Boarding door 23';
 
 //This will only replace the first occurence of the searched string
 // console.log(announcement.replace('door', 'gate'));
@@ -505,7 +505,7 @@ const announcement =
 // console.log(announcement.startsWith('Al'));
 // console.log(announcement.endsWith('or 23'));
 
-const stringName = 'Mark Padawan';
+// const stringName = 'Mark Padawan';
 // let arr = [];
 // const firstName = stringName.slice(0, 4);
 // const lastName = stringName.slice(5);
@@ -522,7 +522,7 @@ const stringName = 'Mark Padawan';
 //   ['Mr.', firstName, lastName, 'the best coder in the whole universe'].join(' ')
 // );
 
-const passenger = 'allison rakotossom nasser abdallah';
+// const passenger = 'allison rakotossom nasser abdallah';
 
 // console.log(passenger.split(' '));
 // let fullName = '';
@@ -534,16 +534,42 @@ const passenger = 'allison rakotossom nasser abdallah';
 
 // console.log(passenger.slice(0, 7).toUpperCase());
 
-const maskCard = function (cardNumber) {
-  const numStr = cardNumber + '';
+// const maskCard = function (cardNumber) {
+//   const numStr = cardNumber + '';
 
-  const cardLength = numStr.length;
+//   const cardLength = numStr.length;
 
-  const cardLastDig = numStr.slice(-4);
+//   const cardLastDig = numStr.slice(-4);
 
-  console.log(cardLastDig);
+//   console.log(cardLastDig);
 
-  console.log(cardLastDig.padStart(cardLength, '+'));
-};
+//   console.log(cardLastDig.padStart(cardLength, '+'));
+// };
 
-maskCard(8388333845858348);
+// maskCard(8388333845858348);
+
+//CHALLENGE #4
+//Write a program that receives a list of variable names written in underscore_case
+// and convert them to camelCase. The input will come from a textarea inserted into
+// the DOM (see code below to insert the elements), and conversion will happen when
+// the button is pressed.
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+//underscore_case
+//underscoreCase
+
+let wordsArray = [];
+document.querySelector('button').addEventListener('click', function () {
+  const textTyped = document.querySelector('textarea').value;
+  const underscoreIndex = textTyped.indexOf('_');
+  const textTypedSplitted = textTyped.split('_');
+
+  const textTypedJoin = textTypedSplitted.join('');
+  console.log(
+    `${textTypedJoin.slice(0, underscoreIndex)}${textTypedJoin[
+      underscoreIndex
+    ].toUpperCase()}${textTypedJoin.slice(underscoreIndex + 1)}`
+  );
+});
