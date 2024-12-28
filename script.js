@@ -568,7 +568,9 @@ document.querySelector('button').addEventListener('click', function () {
   console.log(textTypedSplitted);
   if (textTyped.includes('_')) {
     for (const [entry1, entry2] of [textTypedSplitted]) {
-      console.log(`${entry1}${entry2[0].toUpperCase()}${entry2.slice(1)}`);
+      const modifiedEntry2 = entry2.replace(entry2[0], entry2[0].toUpperCase());
+      console.log(`${entry1}${modifiedEntry2}`);
+      //   console.log(`${entry1}${entry2[0].toUpperCase()}${entry2.slice(1)}`);
     }
   }
 });
