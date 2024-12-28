@@ -561,25 +561,28 @@ document.body.append(document.createElement('button'));
 //underscoreCase
 
 document.querySelector('button').addEventListener('click', function () {
-  const textTyped = document.querySelector('textarea').value.trim();
-  const textTypedLowerCase = textTyped.toLowerCase();
-  const textTypedSplitted = textTypedLowerCase.split('_');
+  const typedEntries = document.querySelector('textarea').value.split('\n');
 
-  console.log(textTypedSplitted);
-  if (textTyped.includes('_')) {
-    for (const [entry1, entry2] of [textTypedSplitted]) {
+  //   console.log(typedEntries);
+
+  const array = [];
+
+  for (const entry of typedEntries) {
+    // console.log(entry);
+
+    const entryLowerCased = entry.toLowerCase();
+
+    const entryLowerCasedSplitted = entryLowerCased.split('_');
+
+    // console.log(entryLowerCasedSplitted);
+
+    for (const [entry1, entry2] of [entryLowerCasedSplitted]) {
       const modifiedEntry2 = entry2.replace(entry2[0], entry2[0].toUpperCase());
-      console.log(`${entry1}${modifiedEntry2}`);
-      //   console.log(`${entry1}${entry2[0].toUpperCase()}${entry2.slice(1)}`);
+
+      array.push(`${entry1.trim()}${modifiedEntry2.trim()}`);
     }
   }
-});
 
-// console.log(`${entry1}+${entry2[0].toUpperCase()}+${entry2.slice(1)}`);
-//   const underscoreIndex = textTyped.indexOf('_');
-//   const textTypedJoin = textTypedSplitted.join('');
-//   console.log(
-//     `${textTypedJoin.slice(0, underscoreIndex)}${textTypedJoin[
-//       underscoreIndex
-//     ].toUpperCase()}${textTypedJoin.slice(underscoreIndex + 1)}`
-//   );
+  //   console.log(array);
+  console.log(array.join('\n'));
+});
