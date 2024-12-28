@@ -568,21 +568,18 @@ document.querySelector('button').addEventListener('click', function () {
   const array = [];
 
   for (const entry of typedEntries) {
-    // console.log(entry);
-
-    const entryLowerCased = entry.toLowerCase();
-
-    const entryLowerCasedSplitted = entryLowerCased.split('_');
-
-    // console.log(entryLowerCasedSplitted);
+    const entryLowerCasedSplitted = entry.toLowerCase().split('_');
 
     for (const [entry1, entry2] of [entryLowerCasedSplitted]) {
       const modifiedEntry2 = entry2.replace(entry2[0], entry2[0].toUpperCase());
 
-      array.push(`${entry1.trim()}${modifiedEntry2.trim()}`);
+      array.push(
+        `${entry1.trim()}${modifiedEntry2.trim()}${'✅'.repeat(
+          array.length + 1
+        )}`
+      );
     }
   }
 
-  //   console.log(array);
   console.log(array.join('\n'));
 });
