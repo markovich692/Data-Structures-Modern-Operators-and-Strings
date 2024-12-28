@@ -560,16 +560,24 @@ document.body.append(document.createElement('button'));
 //underscore_case
 //underscoreCase
 
-let wordsArray = [];
 document.querySelector('button').addEventListener('click', function () {
-  const textTyped = document.querySelector('textarea').value;
-  const underscoreIndex = textTyped.indexOf('_');
-  const textTypedSplitted = textTyped.split('_');
+  const textTyped = document.querySelector('textarea').value.trim();
+  const textTypedLowerCase = textTyped.toLowerCase();
+  const textTypedSplitted = textTypedLowerCase.split('_');
 
-  const textTypedJoin = textTypedSplitted.join('');
-  console.log(
-    `${textTypedJoin.slice(0, underscoreIndex)}${textTypedJoin[
-      underscoreIndex
-    ].toUpperCase()}${textTypedJoin.slice(underscoreIndex + 1)}`
-  );
+  console.log(textTypedSplitted);
+  if (textTyped.includes('_')) {
+    for (const [entry1, entry2] of [textTypedSplitted]) {
+      console.log(`${entry1}${entry2[0].toUpperCase()}${entry2.slice(1)}`);
+    }
+  }
 });
+
+// console.log(`${entry1}+${entry2[0].toUpperCase()}+${entry2.slice(1)}`);
+//   const underscoreIndex = textTyped.indexOf('_');
+//   const textTypedJoin = textTypedSplitted.join('');
+//   console.log(
+//     `${textTypedJoin.slice(0, underscoreIndex)}${textTypedJoin[
+//       underscoreIndex
+//     ].toUpperCase()}${textTypedJoin.slice(underscoreIndex + 1)}`
+//   );
