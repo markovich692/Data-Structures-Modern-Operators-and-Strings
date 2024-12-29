@@ -561,6 +561,8 @@ document.body.append(document.createElement('button'));
 //underscoreCase
 
 document.querySelector('button').addEventListener('click', function () {
+  const array = [];
+
   const entries = document
     .querySelector('textarea')
     .value.toLowerCase()
@@ -568,9 +570,14 @@ document.querySelector('button').addEventListener('click', function () {
 
   for (const entry of entries) {
     const [entry1, entry2] = entry.trim().split('_');
-    // console.log(`${entry1}${entry2[0].toUpperCase()}${entry2.slice(1)}`);
-    console.log(
-      `${entry1}${entry2.replace(entry2[0], entry2[0].toUpperCase())}`
-    );
+    const camelCaseString = `${entry1}${entry2.replace(
+      entry2[0],
+      entry2[0].toUpperCase()
+    )}`;
+
+    const padEndedString = camelCaseString.padEnd(20, ' ');
+    array.push(`${padEndedString}${'✅'.repeat(array.length + 1)}`);
   }
+
+  console.log(array.join('\n'));
 });
