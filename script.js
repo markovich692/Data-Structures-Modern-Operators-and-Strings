@@ -2,7 +2,10 @@
 
 // Data needed for a later exercise
 // const flights =
-//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+// '_Delayed_Departure;fao93766109;txl2133758440;11:25
+// +_Arrival;bru0943384722;fao93766109;11:45
+// +_Delayed_Arrival;hel7439299980;fao93766109;12:05
+// +_Departure;fao93766109;lis2323639855;12:30';
 
 // const italianFoods = new Set([
 //   'pasta',
@@ -554,30 +557,37 @@
 // the DOM (see code below to insert the elements), and conversion will happen when
 // the button is pressed.
 
-document.body.append(document.createElement('textarea'));
-document.body.append(document.createElement('button'));
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
 
-//underscore_case
-//underscoreCase
+// //underscore_case
+// //underscoreCase
 
-document.querySelector('button').addEventListener('click', function () {
-  const array = [];
+// document.querySelector('button').addEventListener('click', function () {
+//   const array = [];
 
-  const entries = document
-    .querySelector('textarea')
-    .value.toLowerCase()
-    .split('\n');
+//   const entries = document
+//     .querySelector('textarea')
+//     .value.toLowerCase()
+//     .split('\n');
 
-  for (const entry of entries) {
-    const [entry1, entry2] = entry.trim().split('_');
-    const camelCaseString = `${entry1}${entry2.replace(
-      entry2[0],
-      entry2[0].toUpperCase()
-    )}`;
+//   for (const entry of entries) {
+//     const [entry1, entry2] = entry.trim().split('_');
+//     const camelCaseString = `${entry1}${entry2.replace(
+//       entry2[0],
+//       entry2[0].toUpperCase()
+//     )}`;
 
-    const padEndedString = camelCaseString.padEnd(20, ' ');
-    array.push(`${padEndedString}${'✅'.repeat(array.length + 1)}`);
-  }
+//     const padEndedString = camelCaseString.padEnd(20, ' ');
+//     array.push(`${padEndedString}${'✅'.repeat(array.length + 1)}`);
+//   }
 
-  console.log(array.join('\n'));
-});
+//   console.log(array.join('\n'));
+// });
+
+//CHALLENGE #5
+// const flights =
+// '_Delayed_Departure;fao93766109;txl2133758440;11:25
+// +_Arrival;bru0943384722;fao93766109;11:45
+// +_Delayed_Arrival;hel7439299980;fao93766109;12:05
+// +_Departure;fao93766109;lis2323639855;12:30';
